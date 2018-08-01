@@ -5,9 +5,9 @@ const file = new static.Server();
 
 require('http').createServer((req, res) => {
     req.addListener('end', () => {
-        file.serve(req, res);        
+        file.serve(req, res);
     }).resume();
-}).listen(process.end.PORT || 3000);
+}).listen(process.env.PORT || 3000);
 
 // npm install --save node-static
 
